@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>Kép+Link</title>
+  <title>Kép+Link</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+     
+    .sidebar a.active {
+      background-color:coral;
+      color: white;
+    }
+    
+    .sidebar a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+    
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+    
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+    </style>
   </head>
 <body>
-  <nav>
+  
+  <div class="sidebar">
     <a  href="https://oraveczadam.github.io/Kollazs/">Home</a>
-    <a style="color: red;" href="https://oraveczadam.github.io/Kollazs/Keplink.html">Képlink</a>
+    <a class="active" href="https://oraveczadam.github.io/Kollazs/Keplink.html">Képlink</a>
     <a href="https://oraveczadam.github.io/Kollazs/listak.html">Listák</a>
     <a href="https://oraveczadam.github.io/Kollazs/orarend.html">Órarend</a>
-   </nav>
-
+   </div>
+   <div class="content">
 	<h1>Oravecz Ádám</h1>
     <p> Képlink feladat </p>
     
 	<a href="https://leasingland.hu/nissan-gt-r-black-edition-tartos-berlet/">
     <img src="https://leasingland.hu/wp-content/uploads/2020/11/Leasing-Land-Nissan-GTR-Black-Edition-Tartos-Berlet-Lizing-Magyarorszag-Hungary-KKV-Auto-01k-1024x646.jpg" alt="Nissan" title="Nissan Gtr" width=250>
     </a>
+    </div>
   </body>
 </html>
