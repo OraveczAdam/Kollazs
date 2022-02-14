@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap</title>
+    <style>
+  
+
+        body {
+          margin: 0;
+          font-family: 'Lobster', cursive;
+
+        }
+        
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+        
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+         
+        .sidebar a.active {
+          background-color:coral;
+          color: white;
+        }
+        
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+        
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+        
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+        
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+        </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="https://oraveczadam.github.io/Kollazs/">Home</a>
+        <a href="https://oraveczadam.github.io/Kollazs/Keplink.html">Képlink</a>
+        <a href="https://oraveczadam.github.io/Kollazs/listak.html">Listák</a>
+        <a href="https://oraveczadam.github.io/Kollazs/orarend.html">Órarend</a>
+        <a href="https://oraveczadam.github.io/Kollazs/Evszakok.html">Évszakok</a>
+        <a class="active" href="https://oraveczadam.github.io/Kollazs/urlap.html">Úrlap</a>
+       </div>
+       <div class="content">
+<h1>Űrlap</h1>
+<br>
+<h2>Pizza</h2>
+<p>Név</p>
+<input type='text'>
+<p>Hely</p>
+<input type='text'>
+<p>Telefonszám</p>
+<input type='tel'>
+<p>Email</p>
+<input type='email'>
+<ol>
+<li>Pizza méret </li>
+<input type='radio' name='meret'>32cm
+<input type='radio' name='meret'>64cm  
+<li>Feltét</li> 
+    <select>
+	<option>---Válassz!--- </option>
+	<option>Szalámi       </option>
+	<option>Sajt        </option>
+	<option>Hús       </option>
+	<option>Sonka          </option>
+    <option>Ananász          </option>
+</select> 
+<li>Választható pizzák</li>
+<select>
+    <option>---Válassz!--- </option>
+    <option>Hawai</option>
+    <option>Magyaros</option>
+    <option>Sonkás</option>
+    <option>Hawai</option>
+</select>
+<br>
+<input type='checkbox'> Egyetértek a felhasználói feltételekkel...
+</div>
+</body>
+</html>
